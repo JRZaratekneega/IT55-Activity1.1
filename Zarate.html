@@ -1,90 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Webpage</title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="This is my first HTML page.">
-    <meta name="keywords" content="HTML, beginner, web development">
-    <meta name="author" content="Jian Renzo Zarate"
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
-        h1 { color: #2c3e50; }
-        p { line-height: 1.5; }
-        .highlight { background-color: yellow; }
-    </style>
-    <script>
-        function greet() {
-            alert("What's good gang, welcome to my page");
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="description" content="My first improved HTML page.">
+  <meta name="keywords" content="HTML, beginner, web development">
+  <meta name="author" content="Jian Renzo Zarate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Webpage</title>
+  
+  <style>
+    /* --- General Styles --- */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    header h1 {
+      margin: 0;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .highlight {
+      background: #ffeb3b;
+      padding: 0.3rem;
+      border-radius: 4px;
+    }
+
+    /* --- Lists --- */
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    /* --- Media --- */
+    img, video, audio {
+      display: block;
+      margin: 1rem 0;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* --- Table --- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    th {
+      background: #f0f0f0;
+    }
+
+    /* --- Form --- */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background: #2c3e50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s;
+    }
+    input[type="submit"]:hover {
+      background: #1abc9c;
+    }
+
+    /* --- Container --- */
+    .box {
+      border: 1px solid #000;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    /* --- Button --- */
+    .btn {
+      background: #1abc9c;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #16a085;
+    }
+  </style>
+
+  <script>
+    function greet() {
+      alert("Welcome gang 👋 Thanks for checking out my first webpage!");
+    }
+    function changeTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </head>
 <body onload="greet()">
-    <h1>Welcome to my first webpage</h1>
-    <p>This is a <b>bold</b> statement, and here is some <i>italic</i> text. </p>
-    <p class="highlight">This paragraph is highlighted using CSS.</p>
-    <h2>My Favorite Animals</h2>
-    <ul>
+
+  <header>
+    <h1>Welcome to My First Webpage</h1>
+    <button class="btn" onclick="changeTheme()">Toggle Dark Mode 🌙</button>
+  </header>
+
+  <main>
+    <section>
+      <p>This is a <b>bold</b> statement, and here is some <i>italic</i> text.</p>
+      <p class="highlight">This paragraph is highlighted using CSS.</p>
+    </section>
+
+    <section>
+      <h2>My Favorite Animals</h2>
+      <ul>
         <li>Tyrannosaurus Rex</li>
         <li>Blue Whale</li>
         <li>Dogs</li>
-    </ul>
+      </ul>
+    </section>
 
-    <h2>How to Throw a dart</h2>
-    <ol>
+    <section>
+      <h2>How to Throw a Dart</h2>
+      <ol>
         <li>Stand straight</li>
         <li>Aim</li>
         <li>Throw</li>
-    </ol>
-<!--The things above is super random-->
-    <p>Visit <ahref="https://www.youtube.com/watch?v=SlT4Qt7FLvQ" target="_blank">YouTube</a> for funny videos.</p>
-    <h2>My Favorite Song</h2>
-    <audio controls>
-    <source src=c:\Users\CMU-Extension\Downloads\Nirvana - The Man Who Sold The World (MTV Unplugged) [fregObNcHC8].mp3"" type="audio/mpeg">
-    Your browser does not support the audio element.
-    </audio>
-    <h2>My Favorite Movie Scene</h2>
-    <video width="320" height="240" controls>
-        <source src="https://www.youtube.com/shorts/wIIRyyIc7Nw type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-    h2>My Favorite Picture</h2>
-    <img src="c:\Users\CMU-Extension\Downloads\shingodzilla-1920x1080.jpg" alt="Godzilla" width="300">
-    <div style="border:1px solid #000; padding:10px; margin-top:10px;">
-    <p>This is a block container using <span style="color:red;">div</span> and <span
-    style="font-weight:bold;">span</span> elements.</p>
-    </div>
+      </ol>
+    </section>
 
-    <h2>Class Schedule</h2>
-    <table border="1" cellpadding="5">
+    <section>
+      <h2>Links</h2>
+      <p>Visit <a href="https://www.youtube.com/watch?v=SlT4Qt7FLvQ" target="_blank">YouTube</a> for funny videos.</p>
+    </section>
+
+    <section>
+      <h2>My Favorite Song</h2>
+      <audio controls>
+        <source src="c:\Users\CMU-Extension\Downloads\Nirvana - The Man Who Sold The World (MTV Unplugged) [fregObNcHC8].mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section>
+      <h2>My Favorite Movie Scene</h2>
+      <video width="480" controls>
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section>
+      <h2>My Favorite Picture</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Shin_Godzilla_poster.jpg/220px-Shin_Godzilla_poster.jpg" alt="Godzilla Poster">
+      <div class="box">
+        <p>This is a block container using <span style="color:red;">div</span> and <span style="font-weight:bold;">span</span> elements.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Class Schedule</h2>
+      <table>
         <tr>
-            <th>Monday</th>
-            <th>WebSystems</th>
+          <th>Day</th>
+          <th>Subject</th>
         </tr>
         <tr>
-            <td>Tuesday</td>
-            <td>Networking</td>
+          <td>Monday</td>
+          <td>Web Systems</td>
         </tr>
         <tr>
-            <td>Wednesday</td>
-            <td>Pathfit</td>
+          <td>Tuesday</td>
+          <td>Networking</td>
         </tr>
-    </table>
+        <tr>
+          <td>Wednesday</td>
+          <td>Pathfit</td>
+        </tr>
+      </table>
+    </section>
 
+    <section>
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
 
-    <h2>Contact Me</h2>
-    <form>
-        <label for="name">Jian renzo</label>
-        <input type="text" id="name" name="name"><br><br>
-        
-        <label for="email">zarosdaikon@gmail.com</label>
-        <input type="email" id="email" name="email"><br><br>
-        
-        <label for="message">Hello</label><br>
-        <textarea id="message" name="message"></textarea><br><br>
-        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write something..." rows="5"></textarea>
+
         <input type="submit" value="Send">
-    </form>
+      </form>
+    </section>
+  </main>
 
-
+  <style>
+    /* Dark mode */
+    .dark {
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+    }
+    .dark header {
+      background: #111;
+    }
+    .dark h2 {
+      border-bottom-color: #444;
+    }
+    .dark input, .dark textarea {
+      background: #333;
+      color: #fff;
+      border: 1px solid #555;
+    }
+    .dark input[type="submit"] {
+      background: #444;
+    }
+  </style>
 </body>
 </html>
